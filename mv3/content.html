@@ -1,0 +1,156 @@
+<html>
+	<body>
+		<div class="notion-confirm-wrap">
+			<div class="notion-confirm">
+				<div class="notion-confirm-text">Would you like to delete this command?</div>
+				<div class="notion-confirm-delete">Delete</div>
+				<div class="notion-confirm-cancel">Cancel</div>
+			</div>
+			<div class="notion-confirm-back"></div>
+		</div>
+		<div class="notion-form-wrap">
+			<div class="notion-form">
+				<div class="notion-form-header">
+					<div class="notion-form-title">Custom command</div>
+					<img src="assets/close.svg" id="notion-close-3">
+				</div>
+				<div class="notion-form-body">
+					<div class="notion-form-section">
+						<div class="notion-form-section-title">Icon</div>
+						<div class="notion-form-field">
+							<div class="notion-form-label">Image URL</div>
+							<input class="notion-form-input" id="notion-image-field" name="notion-form-image" placeholder="Image URL">
+						</div>
+					</div>
+					<hr>
+					<div class="notion-form-section">
+						<div class="notion-form-section-title">Details</div>
+						<div class="notion-form-field">
+							<div class="notion-form-label">Name</div>
+							<input class="notion-form-input" id="notion-name-field" name="notion-form-command-name" placeholder="Command name">
+						</div>
+						<div class="notion-form-field">
+							<div class="notion-form-label">Description</div>
+							<input class="notion-form-input" id="notion-description-field" name="notion-form-command-description" placeholder="Command description">
+						</div>
+						<div class="notion-form-field">
+							<div class="notion-form-label">Command</div>
+							<input class="notion-form-input" name="notion-form-command" placeholder="/command" id="notion-command-field" value="/">
+						</div>
+					</div>
+					<hr>
+					<div class="notion-form-section">
+						<div class="notion-form-section-title">Preferences</div>
+						<div class="notion-form-dropdown">
+							<div class="notion-form-dropdown-left">
+								<div class="notion-form-dropdown-title">Type of action</div>
+								<div class="notion-form-dropdown-description">Choose the type of action the command will perform</div>
+							</div>
+							<div class="notion-form-dropdown-right">
+								<div class="notion-form-dropdown-wrap" id="notion-form-type" data-id="Template"><span>Template</span><img src="assets/dropdown.svg"></div>
+								<div class="notion-form-dropdown-options">
+									<div class="notion-form-dropdown-option" data-id="Template">Template</div>
+									<div class="notion-form-dropdown-option" data-id="Image">Image</div>
+									<div class="notion-form-dropdown-option" data-id="Script">Script</div>
+								</div>
+							</div>
+						</div>
+						<div class="notion-form-dropdown">
+							<div class="notion-form-dropdown-left">
+								<div class="notion-form-dropdown-title">Visibility</div>
+								<div class="notion-form-dropdown-description">Choose whether the command is visible</div>
+							</div>
+							<div class="notion-form-dropdown-right">
+								<div class="notion-form-dropdown-wrap" id="notion-form-visibility" data-id="Visible"><span>Visible</span><img src="assets/dropdown.svg"></div>
+								<div class="notion-form-dropdown-options">
+									<div class="notion-form-dropdown-option" data-id="Visible">Visible</div>
+									<div class="notion-form-dropdown-option" data-id="Hidden">Hidden</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="notion-form-section">
+						<div class="notion-form-section-title">Action</div>
+						<div class="notion-form-field">
+							<div class="notion-form-label" id="notion-action-label">Template content</div>
+							<textarea class="notion-form-textarea" placeholder="Write some content to insert into the Notion page"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="notion-form-buttons">
+					<div class="notion-form-button-wrap">
+						<div class="notion-form-cancel">Cancel</div>
+						<div class="notion-form-save">Save</div>
+					</div>
+				</div>
+			</div>
+			<div class="notion-form-back"></div>
+		</div>
+		<div class="notion-popup" id="notion-plugin-popup">
+			<div class="notion-head">
+				<div class="notion-title" id="notion-plugin-popup-title">Title</div>
+				<img src="" id="notion-close-4">
+			</div>
+			<div id="notion-plugin-popup-label">Label</div>
+			<input class="notion-form-input" id="notion-plugin-popup-input" placeholder="Something here">
+			<div id="notion-plugin-popup-submit">Submit</div>
+		</div>
+		<div class="notion-popup" id="notion-record-popup">
+			<div class="notion-head">
+				<div class="notion-title">Quick recording</div>
+				<img src="assets/close.svg" id="notion-close-2">
+			</div>
+			<div id="notion-video-container">
+				<video id="notion-video" muted></video>	
+			</div>		
+			<div id="record-button">
+				<div id="record-button-shape"></div>
+			</div>
+		</div>
+		<div class="notion-popup" id="notion-draw-popup">
+			<div class="notion-head">
+				<div class="notion-title">Quick drawing</div>
+				<img src="assets/close.svg" id="notion-close">
+			</div>
+			<canvas id="fabric-canvas"></canvas>
+			<div class="notion-tools">
+				<div class="notion-color">
+					<div class="notion-color-out">
+						<div class="notion-color-in"></div>
+					</div>
+					<div class="notion-color-box">
+						<div class="notion-color-item" id="notion-color-1" data-color="#E15F59"></div>
+						<div class="notion-color-item" id="notion-color-2" data-color="#F9D458"></div>
+						<div class="notion-color-item" id="notion-color-3" data-color="#5EBE86"></div>
+						<div class="notion-color-item" id="notion-color-4" data-color="#4890E8"></div>
+						<div class="notion-color-item" id="notion-color-5" data-color="#634FF1"></div>
+						<div class="notion-color-item" id="notion-color-6" data-color="#E44FF1"></div>
+						<div class="notion-color-item" id="notion-color-7" data-color="#222222"></div>
+						</div>
+					</div>
+					<div class="notion-toolbar">
+						<div class="notion-tool notion-tool-active" id="notion-pencil" data-name="Pencil">
+							<img src="assets/pencil.svg">
+						</div>
+						<div class="notion-tool" id="notion-line" data-name="Line">
+							<img src="assets/line.svg">
+						</div>
+						<div class="notion-tool" id="notion-text" data-name="Text">
+							<img src="assets/text.svg">
+						</div>
+						<div class="notion-tool" id="notion-eraser" data-name="Eraser">
+							<img src="assets/eraser.svg">
+						</div>
+						<div class="notion-tool" id="notion-clear" data-name="Clear">
+							<img src="assets/clear.svg"
+						</div>
+					</div>
+					<div class="notion-save">
+						Save
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

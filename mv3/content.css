@@ -1,0 +1,1028 @@
+.temp-section {
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+.temp-section-name {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  color: rgba(55, 53, 47, 0.65);
+  font-size: 11px;
+  font-weight: 500;
+}
+.temp-item {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  transition: background 20ms ease-in 0s;
+  cursor: pointer;
+  width: calc(100% - 8px);
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 3px;
+  background: rgba(55, 53, 47, 0);
+  outline: none !important;
+  border: 0px !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+*:focus {
+  outline: none !important;
+}
+.temp-item:focus,
+.temp-item:hover,
+.notion-focusable:focus {
+  background: rgba(55, 53, 47, 0.08);
+  outline: none !important;
+  border: 0px !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+#tooltip-thing {
+  display: none;
+  position: absolute;
+  height: 26px;
+  line-height: 26px;
+  color: #e7e7e7;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #0f0f0f;
+  font-weight: 500;
+  text-align: center;
+  z-index: 99999;
+  font-size: 12px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+}
+.tooltip-show-me {
+  display: block !important;
+}
+.temp-left-image img {
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+  background: white;
+  width: 46px;
+  height: 46px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px;
+  margin-left: 10px;
+  margin-right: 4px;
+}
+.temp-left-image {
+  display: inline-block;
+  vertical-align: middle;
+}
+.temp-right-info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.temp-title {
+  line-height: 120%;
+  color: rgb(55, 53, 47);
+  width: 100%;
+  user-select: none;
+  font-size: 14px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+.temp-desc {
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(55, 53, 47, 0.65);
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+/* Drawing app */
+.notion-popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  border: 1px solid #ededec;
+  box-shadow: rgb(15 15 15 / 5%) 0px 0px 0px 1px,
+    rgb(15 15 15 / 10%) 0px 3px 6px, rgb(15 15 15 / 20%) 0px 9px 24px;
+  overflow: hidden;
+  transform: scale(0.92);
+  display: none;
+  width: 500px;
+  height: 400px;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 9999999999999;
+  transform-origin: center;
+  transition: all 0.3s cubic-bezier(0.05, 0.03, 0.35, 1);
+}
+#notion-plugin-popup {
+  width: 350px !important;
+  height: fit-content !important;
+}
+#notion-plugin-popup-label {
+  margin-top: 55px;
+  width: calc(100% - 30px);
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(55, 53, 47);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  display: block;
+}
+#notion-plugin-popup-input {
+  width: calc(100% - 30px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  display: block;
+}
+#notion-plugin-popup-submit {
+  height: 40px;
+  border-radius: 3px;
+  background-color: #54a9d7;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  width: calc(100% - 30px);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #4d9ac3;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#notion-plugin-popup-submit {
+  cursor: pointer;
+  background: #4d9ac3 !important;
+}
+.notion-draw-show,
+.notion-plugin-show {
+  transform: scale(1) !important;
+  display: block !important;
+}
+.notion-head {
+  height: 45px;
+  position: absolute;
+  display: block;
+  border-bottom: 1px solid #ededec;
+  width: 100%;
+  top: 0px;
+  margin-top: 0px;
+}
+.notion-title {
+  line-height: 120%;
+  color: rgb(55, 53, 47);
+  width: 100%;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-left: 15px;
+  margin-top: 13px;
+}
+#notion-close,
+#notion-close-2,
+#notion-close-3,
+#notion-close-4,
+#notion-close-activate {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  width: 20px;
+  opacity: 0.5;
+}
+#notion-close:hover,
+#notion-close-2,
+#notion-close-3,
+#notion-close-activate {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+.canvas-container {
+  position: absolute;
+  left: 0px;
+  top: 45px;
+  display: block;
+  height: calc(100% - 90px) !important;
+  width: 500px !important;
+  height: 310px !important;
+}
+.notion-tools {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid #ededec;
+}
+.notion-toolbar {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: table;
+  margin-top: 11px;
+  vertical-align: middle;
+}
+.notion-tool-active img {
+  opacity: 1 !important;
+}
+.notion-tool img {
+  opacity: 0.5;
+}
+.notion-tool {
+  display: table-cell;
+  width: 40px;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+}
+.notion-tool img {
+  vertical-align: middle;
+}
+.notion-tool:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+.notion-tool:hover:after {
+  content: attr(data-name);
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  height: 26px;
+  line-height: 26px;
+  color: #e7e7e7;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #0f0f0f;
+  font-weight: 500;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0px;
+  margin: auto;
+  z-index: 99999;
+  font-size: 12px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+  margin-top: -40px;
+}
+.notion-save {
+  background: #54a9d7;
+  border: 1px solid #4d9ac3;
+  color: #fff;
+  border-radius: 5px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 500;
+  display: inline-block;
+  font-size: 14px;
+  height: 30px;
+  line-height: 28px;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: absolute;
+  right: 15px;
+  bottom: 7px;
+}
+.notion-save:hover {
+  background: #449bc8;
+  cursor: pointer;
+}
+/* Notion color */
+.notion-color {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+}
+.notion-color-out {
+  border: 1px solid #e8e8e8;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.notion-color-out:hover {
+  cursor: pointer;
+}
+.notion-color-in {
+  text-align: center;
+  margin: auto;
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #634ff1;
+  border-radius: 50%;
+}
+.notion-color-box {
+  height: 35px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  position: absolute;
+  margin-top: -80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  width: 220px;
+  border-radius: 5px;
+  display: none;
+}
+.notion-color-box-show {
+  display: block !important;
+}
+.notion-color-item {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-right: 5px;
+}
+.notion-color-item:hover {
+  cursor: pointer;
+}
+.notion-color-item:last-child {
+  margin-right: 0px !important;
+}
+#notion-color-1 {
+  background-color: #e15f59;
+}
+#notion-color-2 {
+  background-color: #f9d458;
+}
+#notion-color-3 {
+  background-color: #5ebe86;
+}
+#notion-color-4 {
+  background-color: #4890e8;
+}
+#notion-color-5 {
+  background-color: #634ff1;
+}
+#notion-color-6 {
+  background-color: #e44ff1;
+}
+#notion-color-7 {
+  background-color: #222222;
+}
+#record-button {
+  width: 45px;
+  height: 45px;
+  background-color: #ef4e6b;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  z-index: 99999;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  border: 1px solid #c63a54;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px 2px rgba(71, 94, 107, 0.05);
+}
+#record-button:hover {
+  cursor: pointer;
+  background-color: #c63a54;
+}
+#record-button-shape {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+.record-stop {
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+}
+.record-stop:hover {
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+}
+.record-stop #record-button-shape {
+  border-radius: 0px !important;
+}
+#notion-video-container {
+  width: 100%;
+  top: 45px;
+  height: calc(100% - 110px);
+  position: absolute;
+  border-bottom: 1px solid #ededec;
+  overflow: hidden;
+}
+#notion-video {
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+}
+
+.notion-sidebar-thing {
+  height: calc(100% - 35px);
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  z-index: 9999;
+  background: #fff;
+  top: 35px;
+  display: block;
+  pointer-events: all;
+}
+.notion-sidebar-head {
+  margin-top: -35px;
+  height: 34px;
+  border-bottom: 1px solid #ededec;
+}
+.notion-sidebar-title {
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 500;
+  margin-left: 16px;
+  font-size: 13.5px;
+  margin-top: 57px;
+}
+.notion-sidebar-button {
+  position: absolute;
+  right: 16px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 13.5px;
+  margin-top: -26px;
+  font-weight: 500;
+  background-color: rgb(6, 156, 205);
+  border-radius: 5px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  border: 1px solid #4d9ac3;
+}
+.notion-sidebar-button:hover {
+  cursor: pointer;
+  background: #449bc8;
+}
+#notion-command-button {
+  width: 33px;
+  height: 28px;
+  position: relative;
+  text-align: center;
+  line-height: 33px;
+  border-radius: 3px;
+  margin-right: 3px;
+}
+.notion-command-tooltip {
+  display: none;
+  position: absolute;
+  height: 26px;
+  line-height: 26px;
+  color: #e7e7e7;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #0f0f0f;
+  font-weight: 500;
+  text-align: center;
+  z-index: 99999;
+  font-size: 12px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+}
+.command-button-active {
+  background: #efefef !important;
+}
+#notion-command-button:hover {
+  cursor: pointer;
+  background: #efefef;
+}
+.css-override {
+  background: transparent !important;
+}
+#command-placeholder {
+  margin-top: 300px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Notion form */
+.notion-form {
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ededec;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px 2px rgba(26, 32, 35, 0.25);
+  position: absolute;
+  z-index: 9999999;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+.notion-form-header {
+  height: 45px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 100%;
+  border-bottom: 1px solid #ededec;
+  top: 0px;
+  background: #fff;
+  position: absolute;
+}
+.notion-form-title {
+  line-height: 120%;
+  color: rgb(55, 53, 47);
+  width: 100%;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-left: 15px;
+  margin-top: 13px;
+}
+.notion-form-body {
+  margin-top: 45px;
+  overflow: scroll;
+  height: calc(100% - 90px);
+}
+.notion-form-section {
+  padding-top: 15px;
+  padding-left: 15px;
+  width: calc(100% - 15px);
+}
+.notion-form-section-title {
+  line-height: 120%;
+  color: rgb(55, 53, 47);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-bottom: 15px;
+}
+.notion-form-info {
+  color: rgba(125, 124, 120, 1);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-top: 10px;
+}
+.notion-form-body hr {
+  width: calc(100% - 30px);
+  text-align: center;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ededec;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.notion-form-field {
+  margin-top: 10px;
+}
+.notion-form-label {
+  color: rgba(125, 124, 120, 1);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-bottom: 8px;
+}
+.notion-form-input {
+  background: #f7f7f5;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  height: 35px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  text-indent: 8px;
+  font-size: 13px;
+}
+.notion-form-error {
+  border: 2px solid #d7546c !important;
+}
+.notion-form-dropdown {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.notion-form-dropdown-title {
+  color: rgb(55, 53, 47);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-bottom: 8px;
+}
+.notion-form-dropdown-description {
+  color: rgba(125, 124, 120, 1);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-bottom: 8px;
+}
+.notion-form-dropdown-right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin-top: 5px;
+  color: rgb(55, 53, 47);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-bottom: 8px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px;
+}
+.notion-form-dropdown-wrap {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.notion-form-dropdown-wrap:hover {
+  cursor: pointer;
+  background: #efefef;
+}
+.notion-form-dropdown-right img {
+  margin-left: 5px;
+}
+.notion-form-textarea {
+  margin-top: 10px;
+  min-width: 100%;
+  min-height: 100px;
+  border-radius: 3px;
+  border: 1px solid #e7e7e7;
+  background: #f7f7f5;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.notion-form-buttons {
+  position: absolute;
+  bottom: 0px;
+  height: 45px;
+  border-top: 1px solid #e7e7e7;
+  width: 100%;
+  background: #fff;
+}
+.notion-form-button-wrap {
+  position: absolute;
+  right: 15px;
+  margin-top: 5px;
+}
+.notion-form-cancel {
+  display: inline-block;
+  color: rgba(125, 124, 120, 1);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  cursor: pointer;
+}
+.notion-form-save {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #54a9d7;
+  border: 1px solid #4d9ac3;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+.notion-form-save:hover {
+  background: #449bc8;
+}
+.notion-form-wrap {
+  z-index: 9999;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.notion-show-form {
+  display: block !important;
+}
+.notion-form-back {
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.6);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.notion-form-dropdown-options {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  right: 0px;
+  z-index: 9999;
+  width: 100px;
+  display: none;
+}
+.show-dropdown {
+  display: block !important;
+}
+.notion-form-dropdown-option {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+.notion-form-dropdown-option:hover {
+  background: #efefef;
+}
+.notion-command-sidebar-body {
+  height: calc(100vh - 90px);
+  overflow: scroll;
+}
+
+/* Notion command sidebar item */
+.notion-command-sidebar-item {
+  height: 75px;
+  border-bottom: 1px solid #ededec;
+  position: relative;
+}
+.notion-command-sidebar-item:hover {
+  background: #f8f8f7;
+  cursor: pointer;
+}
+.notion-command-sidebar-item-icon {
+  height: 48px;
+  width: 48px;
+  border-radius: 3px;
+  border: 1px solid #ededec;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 16px;
+  margin-top: 13px;
+}
+.notion-command-sidebar-item-icon img {
+  width: 100%;
+}
+.notion-command-sidebar-item-info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-top: 10px;
+}
+.notion-command-sidebar-item-title {
+  color: #373530;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin-bottom: 4px;
+}
+.notion-command-sidebar-item-desc {
+  color: #7d7c78;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+.notion-command-sidebar-item:hover .notion-command-sidebar-hover {
+  display: block !important;
+}
+.notion-command-sidebar-hover {
+  width: 70px;
+  height: 26px;
+  line-height: 26px;
+  position: absolute;
+  top: 24px;
+  right: 16px;
+  border-radius: 5px;
+  border: 1px solid #dfdfde;
+  box-sizing: border-box;
+  background: #fff;
+  display: none;
+  overflow: hidden;
+}
+.notion-command-sidebar-hover span {
+  width: 42px;
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  border-right: 1px solid #dfdfde;
+  background: #fff;
+  color: rgba(125, 124, 120, 1);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  vertical-align: top;
+}
+.notion-command-sidebar-hover span:hover {
+  background: #e1e1e1;
+}
+.notion-command-item-hover-wrap {
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  width: 26px;
+  box-sizing: border-box;
+}
+.notion-command-item-hover-wrap img {
+  margin-bottom: -1px;
+  width: 16px;
+}
+.notion-command-item-hover-wrap:hover {
+  background: #e1e1e1;
+}
+/* Notion confirmation box */
+.notion-confirm {
+  width: 336px;
+  background: #fff;
+  box-shadow: rgb(15 15 15 / 5%) 0px 0px 0px 1px,
+    rgb(15 15 15 / 10%) 0px 5px 10px, rgb(15 15 15 / 20%) 0px 15px 40px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 24px 32px;
+  z-index: 9999999;
+  height: fit-content;
+}
+.notion-confirm-text {
+  font-size: 16px;
+  color: rgb(55, 53, 47);
+  fill: currentcolor;
+  line-height: 1.5;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+.notion-confirm-wrap {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99999999;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.notion-confirm-show {
+  display: block !important;
+}
+.notion-confirm-delete {
+  user-select: none;
+  transition: background 20ms ease-in 0s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  height: 32px;
+  padding: 0px 12px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgb(235, 87, 87);
+  border: 1px solid rgba(235, 87, 87, 0.5);
+  width: 100%;
+  margin-top: 8px;
+}
+.notion-confirm-delete:hover {
+  background: #fbefee;
+}
+.notion-confirm-delete:focus {
+  border: 1px solid rgba(235, 87, 87, 0.5);
+}
+.notion-confirm-cancel {
+  user-select: none;
+  transition: background 20ms ease-in 0s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  height: 32px;
+  padding: 0px 12px;
+  font-size: 14px;
+  line-height: 1.2;
+  border: 1px solid rgba(55, 53, 47, 0.16);
+  width: 100%;
+  margin-top: 8px;
+}
+.notion-confirm-cancel:hover {
+  background: #e1e1e1;
+}
+.notion-confirm-cancel:focus {
+  border: 1px solid #e1e1e1;
+}
+.notion-confirm-back {
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.6);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#notion-activate-popup {
+  display: block !important;
+}
+#notion-activate-popup iframe {
+  width: 400px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 120px;
+  outline: none;
+  border: 0px;
+  overflow: hidden;
+}
