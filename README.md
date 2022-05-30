@@ -24,7 +24,6 @@ Made by [Alyssa X](https://twitter.com/alyssaxuu)
 	- [Creating a command](#creating-a-command)
 	- [Editing a command](#editing-a-command)
 	- [Deleting a command](#deleting-a-command)
-
 - [Slashy SDK](#slashy-sdk)
  - [Show modal]($show-modal)
  - [Write to Notion](#write-to-notion)
