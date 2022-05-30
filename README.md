@@ -157,8 +157,7 @@ You can run Slashy locally without having to install it from the Chrome Store or
 2. Open the about:debugging page in your browser, click the "This Firefox" option.
 3. Click the "Load Temporary Add-on" button, and select any file inside the [mv2 folder](https://github.com/alyssaxuu/slashy/tree/master/mv2)
 4. You might need to add a [temporary extension ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#extension_id_format) in the manifest.json in order to be able to use storage. 
-5. In order for the /draw function to work properly, you must go to about:config in Firefox (type in the address bar), and then set `dom.events.asyncClipboard.clipboardItem` to true by clicking on the toggle button on the right. See below:<br>
-<img src="https://github.com/alyssaxuu/slashy/blob/master/aboutconfig.png" alt="About config" width="400">
+5. In order for the /draw function to work properly, you must go to about:config in Firefox (type in the address bar), and then set `dom.events.asyncClipboard.clipboardItem` to true by clicking on the toggle button on the right.
 6. That's it, you will now be able to use Slashy locally.
 
 ## Libraries used
