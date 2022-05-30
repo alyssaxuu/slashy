@@ -53,7 +53,7 @@ In order for the /draw command to work in Firefox, you must go to about:config i
 
 ### Accessing the sidebar
 You can then open [Notion](https://notion.so), and you will see a "zap" icon on the top right of the sidebar. Click it to see and manage all the custom commands. Here's how it should look like after installing the extension:<br><br>
-<img src="https://github.com/alyssaxuu/slashy/blob/master/sidebar.png" alt="Sidebar example" width="400">
+<img src="https://github.com/alyssaxuu/slashy/blob/master/sidebar.png" alt="Sidebar example" width="500">
 
 ### The draw command
 One of the default commands Slashy comes with is **/draw**.
@@ -157,8 +157,8 @@ You can run Slashy locally without having to install it from the Chrome Store or
 2. Open the about:debugging page in your browser, click the "This Firefox" option.
 3. Click the "Load Temporary Add-on" button, and select any file inside the [mv2 folder](https://github.com/alyssaxuu/slashy/tree/master/mv2)
 4. You might need to add a [temporary extension ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#extension_id_format) in the manifest.json in order to be able to use storage. 
-5. In order for the /draw function to work properly, you must go to about:config in Firefox (type in the address bar), and then set `dom.events.asyncClipboard.clipboardItem` to true by clicking on the toggle button on the right. See below:
-![Image example](aboutconfig.png)
+5. In order for the /draw function to work properly, you must go to about:config in Firefox (type in the address bar), and then set `dom.events.asyncClipboard.clipboardItem` to true by clicking on the toggle button on the right. See below:<br>
+<img src="https://github.com/alyssaxuu/slashy/blob/master/aboutconfig.png" alt="About config" width="400">
 6. That's it, you will now be able to use Slashy locally.
 
 ## Libraries used
