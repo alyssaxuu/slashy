@@ -2,7 +2,8 @@ chrome.runtime.onInstalled.addListener(function(details) {
 	if (details.reason == "install") {
 			// Set commands on install
 			chrome.storage.sync.get(['commands'], function(result) {
-					if (typeof result === "undefined") {
+				console.log(result);
+					if (typeof result.commands === "undefined") {
 							chrome.storage.sync.set({
 									"commands": [{
 											id: 0,
@@ -27,7 +28,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 					}
 			});
 			chrome.storage.sync.get(['idnum'], function(result) {
-					if (typeof result === "undefined") {
+					if (typeof result.idnum === "undefined") {
 							chrome.storage.sync.set({
 									"idnum": 2
 							});
