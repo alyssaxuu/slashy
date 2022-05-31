@@ -382,10 +382,7 @@ $(document).ready(() => {
 							showRecording();
 					} else {
 							if (inst.type == "Template") {
-									navigator.clipboard.writeText(inst.content).then(function() {
-											document.execCommand('paste');
-											clearSelection()
-									})
+									document.execCommand('insertText', false, inst.content);
 							} else if (inst.type == "Image") {
 									var img = new Image();
 									img.crossOrigin = "anonymous"
@@ -415,10 +412,7 @@ $(document).ready(() => {
 													lastelement.html(lastelement.text().replace(lastcommand, ""))
 													lastelement.html(lastelement.text().replace(/(\/\S+)/gi, ""))
 													setTimeout(function() {
-															navigator.clipboard.writeText(n).then(function() {
-																	document.execCommand('paste');
-																	clearSelection()
-															})
+														document.execCommand('insertText', false, n);
 													}, 100)
 											},
 											addImageBlob: n => navigator.clipboard.write([new ClipboardItem({
