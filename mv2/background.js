@@ -36,6 +36,8 @@ browser.runtime.onInstalled.addListener(function(details) {
 							});
 					}
 			});
+
+			browser.windows.create({url: "https://slashy.notion.site/slashy/Get-started-with-Slashy-498ef2b3b5724e5dbb20c7da643d0618"});
 	} else if (details.reason == "update") {
 			// Set commands on update
 			var gettingItem = browser.storage.sync.get('commands');

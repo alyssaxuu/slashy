@@ -33,6 +33,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 							});
 					}
 			});
+			chrome.tabs.create({ url: "https://slashy.notion.site/slashy/Get-started-with-Slashy-498ef2b3b5724e5dbb20c7da643d0618" });
 	} else if (details.reason == "update") {
 			// Set commands on update
 			chrome.storage.sync.get(['commands'], function(result) {
