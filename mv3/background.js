@@ -63,7 +63,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 					}
 			});
 			chrome.storage.sync.get(['idnum'], function(result) {
-					if (typeof result.idsnum === "undefined") {
+					if (typeof result.idnum === "undefined") {
 							chrome.storage.sync.set({
 									"idnum": 2
 							});
