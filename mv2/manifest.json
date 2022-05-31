@@ -1,7 +1,7 @@
 {
 	"name": "Slashy - Custom commands for Notion",
 	"description": "Record, draw, and create custom commands without leaving Notion.",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"manifest_version": 2,
 	"background": {
 		"scripts": ["background.js"]
