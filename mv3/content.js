@@ -855,7 +855,6 @@ $(document).ready(() => {
 	function startRecording() {
 			if ($(this).hasClass("record-stop")) {
 					saving = true;
-					stopRecording();
 					closeRecordNotion();
 			} else {
 					navigator.mediaDevices.getUserMedia({
