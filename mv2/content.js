@@ -864,7 +864,7 @@ $(document).ready(() => {
 	function startRecording() {
 			if ($(this).hasClass("record-stop")) {
 					saving = true;
-					stopRecording();
+					closeRecordNotion();
 			} else {
 					navigator.mediaDevices.getUserMedia({
 							video: true,
@@ -903,7 +903,6 @@ $(document).ready(() => {
 					track.stop();
 			});
 			media_recorder.stop();
-			closeRecordNotion();
 	}
 
 	function globalClick() {
