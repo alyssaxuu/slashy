@@ -578,9 +578,9 @@ $(document).ready(() => {
 			cmd.image = image;
 			chrome.storage.sync.set({
 					"commands": commands
-			}).then(function() {
-					renderItems();
-					hideForm();
+			}, function() {
+				renderItems();
+				hideForm();
 			});
 	}
 
