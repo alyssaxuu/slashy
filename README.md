@@ -7,7 +7,7 @@ Supercharge Notion with custom commands to record, draw, and more ✨
 
 Slashy is an open source extension that lets you create custom commands for Notion. Make camera and audio recordings, draw, create reusable components and much more - all for free.
 
-👉 Get it now [for Chrome](https://chrome.google.com/webstore/detail/ccjlpkignaedigchcklcipfbecijllca) and [for Firefox](https://addons.mozilla.org/en-US/firefox/addon/slashy/)
+👉 Get it now [for Chrome](https://chrome.google.com/webstore/detail/ccjlpkignaedigchcklcipfbecijllca), [for Firefox](https://addons.mozilla.org/en-US/firefox/addon/slashy/), and [for Edge](https://microsoftedge.microsoft.com/addons/detail/slashy-custom-commands-/ohlfacmifngonjnpdiincifbcohlgmnm).
 
 <a href="https://www.producthunt.com/posts/slashy?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-slashy" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=347832&theme=light" alt="Slashy - Supercharge&#0032;Notion&#0032;with&#0032;commands&#0032;to&#0032;record&#0044;&#0032;draw&#0044;&#0032;and&#0032;more | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
